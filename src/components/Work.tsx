@@ -53,23 +53,67 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
-            <div className="work-box" key={index}>
-              <div className="work-info">
-                <div className="work-title">
-                  <h3>0{index + 1}</h3>
-
-                  <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
-                  </div>
+          
+          <div className="work-box">
+            <div className="work-info">
+              <div className="work-title">
+                <h3>01</h3>
+                <div>
+                  <h4>Alvi Global</h4>
+                  <p>Weather Widget</p>
                 </div>
-                <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
               </div>
-              <WorkImage image="/images/placeholder.webp" alt="" />
+              <p className="work-description">
+                A modular AEM component providing real-time weather forecasts across global pages, optimized for high performance and scalability.
+              </p>
+              <h4>Tools and features</h4>
+              <p>AEM 6.5, Java, Sling Servlets, Sightly, OSGi, OpenWeatherMap API</p>
             </div>
-          ))}
+            <a href="https://github.com/yusuf-dev31/aem-global-weather-widget" target="_blank" rel="noreferrer">
+              <WorkImage image="/images/weatherWidgetSnap.png" alt="Alvi Global Project" link="https://github.com/yusuf-dev31/aem-global-weather-widget" />
+            </a>
+          </div>
+
+          <div className="work-box">
+            <div className="work-info">
+              <div className="work-title">
+                <h3>02</h3>
+                <div>
+                  <h4>RetailHub</h4>
+                  <p>Headless Commerce</p>
+                </div>
+              </div>
+              <p className="work-description">
+                An AI-powered headless commerce solution leveraging Content Fragments and GraphQL for a seamless decoupled frontend experience.
+              </p>
+              <h4>Tools and features</h4>
+              <p>AEM Headless CMS, GraphQL APIs, Google Gemini AI, Prompt Engineering</p>
+            </div>
+            <a href="https://github.com/yusuf-dev31/aem-ai-headless-commerce" target="_blank" rel="noreferrer">
+              <WorkImage image="/images/Ai-headless-commence.png" alt="RetailHub AI Project" link="https://github.com/yusuf-dev31/aem-ai-headless-commerce" />
+            </a>
+          </div>
+
+          <div className="work-box">
+            <div className="work-info">
+              <div className="work-title">
+                <h3>03</h3>
+                <div>
+                  <h4>NotesApp</h4>
+                  <p>CRUD Application</p>
+                </div>
+              </div>
+              <p className="work-description">
+                A full-featured notes management system with secure authentication, dedicated RESTful APIs, and robust MongoDB cloud persistence.
+              </p>
+              <h4>Tools and features</h4>
+              <p>Node.js, Express, MongoDB Atlas, RESTful APIs, MVC Architecture, Render Deployment</p>
+            </div>
+            <a href="https://backend-js-uj6u.onrender.com/" target="_blank" rel="noreferrer">
+              <WorkImage image="/images/Crud.png" alt="NotesApp Project" link="https://backend-js-uj6u.onrender.com/" />
+            </a>
+          </div>
+
         </div>
       </div>
     </div>

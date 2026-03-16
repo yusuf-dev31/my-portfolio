@@ -6,9 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          Adobe Certified AEM Developer with 5 years of experience designing and building enterprise digital experience platforms using Adobe Experience Manager for large-scale content and digital asset management systems. Specialized in Sling/OSGi backend architecture, headless CMS implementations using Content Fragments and GraphQL APIs, and scalable content delivery across multi-channel platforms.
         </p>
       </div>
     </div>

@@ -82,8 +82,13 @@
   margin: 0;
   margin-top: 3px;
 }
-.work-info > p {
-  width: 90%;
+.work-description {
+  margin-bottom: 25px !important;
+  margin-top: 15px !important;
+  font-size: 16px;
+  line-height: 1.6;
+  width: 95% !important;
+  color: #ffffff !important; /* Making it slightly brighter for readability */
 }
 .work-image {
   display: flex;
@@ -126,12 +131,15 @@
   object-fit: cover;
 }
 .work-image img {
-  max-width: 100%;
-  max-height: 350px;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px; /* Added slight rounding for premium feel */
 }
 @media only screen and (max-height: 900px) {
   .work-image img {
-    max-height: 250px;
+    width: 250px;
+    height: 250px;
   }
   .work-box {
     padding-top: 40px;
@@ -152,6 +160,9 @@
   }
   .work-info h4 {
     font-size: 15px;
+  }
+  .work-description {
+    font-size: 14px !important;
   }
   .work-box {
     width: 450px;
@@ -186,6 +197,11 @@
   }
   .work-box {
     gap: 20px;
+  }
+  .work-description {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+    margin-top: 5px !important;
   }
 }
 /* @media only screen and (max-width: 900px) {

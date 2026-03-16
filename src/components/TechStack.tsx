@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
 import {
   BallCollider,
@@ -13,14 +14,13 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
+  "/images/aem.png",
+  "/images/java.png",
+  "/images/aws.png",
   "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
+  "/images/node2.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -172,9 +172,13 @@ const TechStack = () => {
 
       <Canvas
         shadows
+        dpr={[1, 1.5]}
         gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
         camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
-        onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}
+        onCreated={(state) => {
+          state.gl.toneMappingExposure = 1.5;
+          setTimeout(() => ScrollTrigger.refresh(), 100);
+        }}
         className="tech-canvas"
       >
         <ambientLight intensity={1} />
@@ -203,8 +207,8 @@ const TechStack = () => {
           environmentIntensity={0.5}
           environmentRotation={[0, 4, 2]}
         />
-        <EffectComposer enableNormalPass={false}>
-          <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
+        <EffectComposer multisampling={0} enableNormalPass={false}>
+          <N8AO halfRes color="#0f002c" aoRadius={2} intensity={1.15} />
         </EffectComposer>
       </Canvas>
     </div>
