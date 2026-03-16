@@ -18,7 +18,9 @@ I have modified the gsap club plugins with the trial plugins, but with the trial
 
 ### Video Demo 🎥
 
-<video src="./ImageSnaps/cmp.mp4" width="100%" controls></video>
+[![Video Demo](./ImageSnaps/snap-1.png)](./ImageSnaps/cmp.mp4)
+
+Or view the video directly: [cmp.mp4](./ImageSnaps/cmp.mp4)
 
 ## License
 
